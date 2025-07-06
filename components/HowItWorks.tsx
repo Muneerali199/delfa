@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Search, Calendar, Truck, CheckCircle, MapPin, Clock, Shield, Star, Users, Package, TrendingUp, Building, Zap, Globe, Award, Target, ArrowRight, Sparkles } from 'lucide-react';
 
 const HowItWorks = () => {
@@ -94,7 +94,7 @@ const HowItWorks = () => {
     { icon: Globe, title: "22+ Cities Network", subtitle: "Pan-India Presence", color: "from-purple-500 to-pink-500" }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -105,14 +105,14 @@ const HowItWorks = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: [0.25, 0.46, 0.45, 0.94] as const
       }
     }
   };
